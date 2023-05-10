@@ -1,0 +1,294 @@
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Noto Sans", "Noto Sans JP", sans-serif;
+}
+
+.l-container {
+  color: #333;
+  display: grid;
+  grid-template:
+    "head head" 100px
+    "sub sub" auto
+    "main main" 1fr
+    "side side" auto
+    "foot foot" auto
+    / 1fr;
+}
+
+/* ヘッダー */
+.l-header {
+  grid-area: head;
+  width: 100%;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+}
+
+.p-header__title {
+  font-size: 26px;
+  font-weight: 300;
+  padding: 15px 20px;
+}
+
+.p-header__navi {
+  display: flex;
+  list-style: none;
+  font-size: 13.5px;
+  background-color: #333;
+  padding: 10px 0px;
+  overflow-x: auto;
+}
+
+.p-header__navi__list {
+  margin-left: 50px;
+}
+
+.p-header__navi__link {
+  text-decoration: none;
+  color: white;
+}
+
+/* サブコンテンツ */
+.l-subArea {
+  grid-area: sub;
+  padding: 0px 20px;
+}
+
+.p-subArea {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.p-subArea__item {
+  margin-top: 30px;
+}
+
+.p-subArea__photo {
+  width: 100%;
+  height: auto;
+}
+
+.p-subArea__title {
+  font-size: 16px;
+  padding: 10px 0px 20px 0px;
+  text-align: left;
+}
+
+.p-subArea__more__link {
+  font-size: 14px;
+  color: #333;
+}
+
+/* メインエリア */
+.l-mainArea {
+  grid-area: main;
+  padding: 0px 20px;
+}
+
+.p-main__title {
+  padding-top: 70px;
+}
+
+.p-main__title__link {
+  font-size: 24px;
+  text-decoration: none;
+  color: #333;
+}
+
+.p-main__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-main__date {
+  padding: 20px 0px 10px 0px;
+  font-size: 14px;
+}
+
+.p-main__photo {
+  width: 100%;
+  height: auto;
+}
+
+.p-main__text {
+  padding: 20px 30px;
+  text-align: left;
+}
+
+.p-main__more_btn {
+  text-align: center;
+  padding-top: 15px;
+  font-size: 14px;
+}
+
+.p-main__more__link {
+  text-align: center;
+  color: #333;
+}
+
+/* サイドバー */
+.l-sideBar {
+  grid-area: side;
+  padding: 70px 20px;
+}
+
+.p-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-profile__icon {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+}
+
+.p-profile__name {
+  font-size: 17px;
+  font-weight: bold;
+  padding-top: 30px;
+}
+
+.p-profile__text {
+  font-size: 13.5px;
+  text-align: left;
+  padding-top: 30px;
+}
+
+.p-ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+}
+
+.p-ranking__title {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.p-ranking__photo {
+  width: 100%;
+  height: auto;
+}
+
+.p-ranking__text {
+  font-size: 13.5px;
+  text-align: left;
+  padding: 5px 0px 20px 0px;
+}
+
+.p-archive {
+  padding-top: 30px;
+}
+
+.p-archive__title {
+  font-size: 17px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.p-archive__list {
+  list-style: none;
+  font-size: 13.5px;
+  text-align: left;
+  border-bottom: solid 1px #777;
+}
+
+.p-archive__list__details {
+  border-top: solid 1px #777;
+  padding: 20px;
+}
+
+/* フッター */
+.l-footer {
+  grid-area: foot;
+  background-color: #f7f7f7;
+}
+
+.p-footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px 20px;
+}
+
+.p-footer__title {
+  font-size: 17px;
+}
+
+/* ABOUT */
+.p-footer__about {
+  width: 100%;
+}
+
+.p-footer__about__text {
+  padding: 30px 0px 20px 0px;
+  font-size: 13.5px;
+}
+
+.p-footer__about__list {
+  display: flex;
+  flex-direction: column;
+  font-size: 13.5px;
+}
+
+.p-footer__about__link {
+  text-decoration: none;
+  margin-top: 5px;
+  color: #333;
+}
+
+/* MENU */
+.p-footer__menu {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.p-footer__menu__list {
+  list-style: none;
+  font-size: 13px;
+  border-top: solid 1px #777;
+  margin-top: 30px;
+}
+
+.p-footer__menu__list__details {
+  padding: 15px;
+  border-bottom: solid 1px #777;
+}
+
+.p-footer__menu__link {
+  text-decoration: none;
+  color: #333;
+}
+
+/* SNS */
+.p-footer__twitter {
+  width: 100%;
+  padding-top: 50px;
+}
+
+.p-footer__twitter__TimeLine {
+  padding-top: 25px;
+  border-radius: 10px;
+}
+
+.p-copyWrite {
+  text-align: center;
+  font-size: 12px;
+  padding-bottom: 10px;
+}
