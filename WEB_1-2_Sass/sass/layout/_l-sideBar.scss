@@ -1,0 +1,10 @@
+@use "mixin" as *;
+
+.l-sideBar {
+  grid-area: side;
+  padding: 70px 170px 0px 50px;
+
+  @include mq(sp) {
+    padding: 70px 20px;
+  }
+}

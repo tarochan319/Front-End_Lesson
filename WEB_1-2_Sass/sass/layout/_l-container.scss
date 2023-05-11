@@ -1,0 +1,22 @@
+@use "mixin" as *;
+
+.l-container {
+  color: #333;
+  display: grid;
+  grid-template:
+    "head head" 100px
+    "sub sub" auto
+    "main side" 1fr
+    "foot foot" auto
+    / auto 550px;
+
+  @include mq(sp) {
+    grid-template:
+      "head head" 100px
+      "sub sub" auto
+      "main main" 1fr
+      "side side" auto
+      "foot foot" auto
+      / 1fr;
+  }
+}
