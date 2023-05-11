@@ -1,0 +1,103 @@
+@use "mixin" as *;
+
+.p-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .p-profile__icon {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+  }
+
+  .p-profile__name {
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 30px;
+
+    @include mq(sp) {
+      font-size: 17px;
+    }
+  }
+
+  .p-profile__text {
+    font-size: 13.5px;
+    text-align: left;
+    margin-top: 30px;
+  }
+}
+
+.p-ranking {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+
+  @include mq(sp) {
+    padding-top: 60px;
+  }
+
+  .p-ranking__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @include mq(sp) {
+      font-size: 17px;
+    }
+  }
+
+  .p-ranking__photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .p-ranking__text {
+    font-size: 14px;
+    padding: 5px 0px 20px 0px;
+
+    @include mq(sp) {
+      font-size: 13.5px;
+      text-align: left;
+    }
+  }
+}
+
+.p-archive {
+  padding-top: 40px;
+
+  @include mq(sp) {
+    padding-top: 30px;
+  }
+
+  .p-archive__title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+
+    @include mq(sp) {
+      font-size: 17px;
+      padding-bottom: 30px;
+    }
+  }
+
+  .p-archive__list {
+    list-style: none;
+    font-size: 14px;
+    text-align: left;
+    padding-top: 30px;
+
+    @include mq(sp) {
+      font-size: 13.5px;
+      border-bottom: solid 1px #777;
+      padding-top: 0px;
+    }
+
+    .p-archive__list__details {
+      border-top: solid 1px #777;
+      padding: 20px;
+    }
+  }
+}
